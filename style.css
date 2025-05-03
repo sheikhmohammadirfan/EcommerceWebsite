@@ -18,7 +18,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #222;
-  color: #fff;
+  color: #fff;  
   padding: 20px 40px;
   position: sticky;
   top: 0;
@@ -65,8 +65,8 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a subtle shadow to improve readability */
 }
 
-
-.btn {
+/* for explore button  */
+.btn-explore {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
@@ -74,6 +74,11 @@ body {
   color: #222222;
   text-decoration: none;
   border-radius: 5px;
+}
+
+.btn-explore:hover {
+  background-color: black ;
+  color: #D3D3D3;
 }
 
 /* About */
@@ -112,16 +117,17 @@ body {
 
 .product-card img {
   width: 100%;
+  height: 62%;
   border-radius: 8px;
   margin-bottom: 10px;
 }
 
 /* Footer */
 .footer {
+  font-family: Arial, sans-serif;
   background-color: #222;
   color: white;
   text-align: center;
-  padding: 20px;
 }
 
 /* Responsive */
@@ -283,7 +289,7 @@ body {
   outline: none;
 }
 
-button.btn {
+.btn-submit, .btn-contactus {
   background-color: #3a3838;
   color: white;
   border: none;
@@ -293,13 +299,100 @@ button.btn {
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: flex-start;
+  text-decoration: none;
 }
 
-button.btn:hover {
-  background-color: #c92c3b;
+.btn-submit:hover, .btn-contactus:hover {
+  background-color: #D3D3D3;
+  color: black;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   opacity: 1; /* Ensures visibility in all browsers */
+}
+
+
+ 
+.footer .social-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+} 
+
+.footer .social-icons a svg {
+  width: 24px;
+  height: 24px;
+  fill: #ccc;
+  transition: fill 0.3s ease;
+}
+
+
+ .footer .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #333;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.footer .social-icons svg {
+  width: 22px;
+  height: 22px;
+  fill: #ccc;
+  transition: fill 0.3s ease;
+} 
+
+/* Hover Effects */
+ .footer .social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.footer .social-icons a:hover svg {
+  fill: #fff;
+}
+
+/* Platform-Specific Colors on Hover */
+ .footer .social-icons a[aria-label="Instagram"]:hover {
+  background-color: #E1306C;
+}
+
+.footer .social-icons a[aria-label="Facebook"]:hover {
+  background-color: #1877F2;
+}
+
+.footer .social-icons a[aria-label="Email"]:hover {
+  background-color: #6C63FF;
+}
+
+.footer .social-icons a[aria-label="WhatsApp"]:hover {
+  background-color: #25D366;
+}
+
+.footer .social-icons a[aria-label="Twitter"]:hover {
+  background-color: #1DA1F2;
+}
+
+.footer .social-icons a[aria-label="LinkedIn"]:hover {
+  background-color: #0077B5;
+}
+
+.footer .social-icons a[aria-label="Github"]:hover {
+  background-color: #181717
+  
+}
+ 
+.footer .social-icons a[aria-label="Google"]:hover {
+  background: conic-gradient(
+    #4285F4 0deg 90deg,
+    #EA4335 90deg 180deg,
+    #FBBC05 180deg 270deg,
+    #34A853 270deg 360deg
+  );
 }
