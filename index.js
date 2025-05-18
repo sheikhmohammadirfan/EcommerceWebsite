@@ -81,3 +81,50 @@ function clearMessages() {
         input.style.borderColor = '';
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const map = document.querySelector('.map-container iframe');
+  if (map) {
+    function stabilizeMap() {
+      map.style.opacity = '0.99'; // Forces re-render
+      requestAnimationFrame(() => {
+        map.style.opacity = '1';
+      });
+    }
+    // Run on scroll/resize (common flicker triggers)
+    window.addEventListener('scroll', stabilizeMap);
+    window.addEventListener('resize', stabilizeMap);
+  }
+});
+
+
+// hamburger 
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  // Toggle menu on hamburger click
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent bubbling
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+
+  // Prevent navLinks click from closing the menu
+  navLinks.addEventListener('click', (e) => {
+    e.stopPropagation(); // allow interaction inside menu
+  });
+
+  // Close menu on clicking outside
+  document.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+  });
+
+  // Optional: Close on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    }
+  });
+

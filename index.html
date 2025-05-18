@@ -5,21 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SteelMart | Quality Steel Products</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="index.js">
 </head>
 <body>
 
   <!-- Header -->
-  <header class="navbar">
-    <div class="logo">SteelMart</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="./about.html">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="https://wa.me/919876543210">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="navbar">
+  <div class="logo">SteelMart</div>
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- Navigation Links -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="./about.html">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="https://wa.me/919876543210">Contact</a></li>
+  </ul>
+</header>
+
 
   <!-- Hero Section -->
   <section class="hero">
@@ -41,19 +46,22 @@
     <h2>Our Products</h2>
     <div class="product-grid">
       <div class="product-card">
-        <img src="steeltube1.jpg" alt="Steel Rods" />
+        <img src="steeltube1.jpg" alt="Steel Rods" loading="lazy"/>
         <h3>Steel Rods</h3>
         <p>High-tensile strength rods for industrial and construction use.</p>
+        <button class="btn-add-to-cart">Place Order</button>
       </div>
       <div class="product-card">
-        <img src="steeltube2.jpg" alt="Steel Sheets" />
+        <img src="steeltube2.jpg" alt="Steel Sheets" loading="lazy"/>
         <h3>Steel Sheets</h3>
         <p>Durable steel sheets available in various thicknesses.</p>
+        <button class="btn-add-to-cart">Place Order</button>
       </div>
       <div class="product-card">
-        <img src="steeltube3.jpg" alt="Steel Pipes" />
+        <img src="steeltube3.jpg" alt="Steel Pipes" loading="lazy"/>
         <h3>Steel Pipes</h3>
         <p>Galvanized and stainless steel pipes for plumbing and structural work.</p>
+        <button class="btn-add-to-cart">Place Order</button>
       </div>
     </div>
   </section>
@@ -160,5 +168,6 @@
       <p>&copy; 2025 SteelMart. All rights reserved.</p>
     </div>
   </footer>  
+  <script src="index.js" defer></script>
 </body>
 </html>
